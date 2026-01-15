@@ -1,0 +1,20 @@
+{
+"hyprland/workspaces": {
+     "format": "{icon} {windows}",
+     "on-scroll-up": "hyprctl dispatch workspace e+1",
+     "on-scroll-down": "hyprctl dispatch workspace e-1",
+
+    "format-window-separator": " ",
+    "workspace-taskbar": {
+      "enable": true,
+      "update-active-window": true,
+      "format": "{icon}",
+      "icon-size": 20,
+    }
+},
+
+
+"hyprland/window": {
+    "separate-outputs": true
+},
+}
