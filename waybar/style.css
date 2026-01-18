@@ -218,6 +218,12 @@ menuitem {
   color: @text;
 }
 
+#battery {
+    font-family: "Symbols Nerd Font";
+    font-size: 14px;
+    padding: 0 8px;
+}
+
 #custom-weather {
   border-radius: 0;
   margin: 3px 0;

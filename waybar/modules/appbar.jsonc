@@ -1,0 +1,75 @@
+{
+ "network": {
+    "format-wifi": "  ({signalStrength}%)   {bandwidthUpBits}  {bandwidthDownBits}",
+    "format-ethernet": "   {bandwidthUpBits}   {bandwidthDownBits}",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": " Disconnected",
+    "interval": 1
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%",
+    "rotate": 0,
+    "format-alt": " {usage}%"
+  },
+  "memory": {
+    "interval": 1,
+    "format-alt": "󰾆 {percentage}%",
+    "rotate": 0,
+    "format": " {used:0.1f}GB/{total:0.1f}GB",
+    "tooltip": true,
+    "tooltip-format": "󰾆 {percentage}%  {used:0.1f}GB/{total:0.1f}GB"
+  },
+    "temperature": {
+      "thermal-zone": 2,
+      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      "critical-threshold": 80,
+      "format-critical": "{icon} {temperatureC}°C",
+      "format": "{icon} {temperatureC}°C",
+      "format-icons": [
+        "",
+        "",
+        ""
+      ]
+    },
+"backlight": {
+      "format": "{icon} {percent}%",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+
+"power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "{profile} : {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "",
+      "performance": "",
+      "balanced": "",
+      "power-saver": ""
+    }
+  },
+  "custom/power-menu": {
+    "format": "<span font=\"16px\"></span>",
+    "tooltip": false,
+    "menu": "on-click",
+    "menu-file": "$HOME/.config/waybar/menus/power.menu.xml",
+    "menu-actions": {
+      "shutdown": "shutdown now",
+      "reboot": "reboot",
+      "sleep": "systemctl suspend",
+      "hibernate": "systemctl hibernate",
+      "logout": "hyprctl dispatch exit"
+    }
+  },
+}

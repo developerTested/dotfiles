@@ -1,38 +1,41 @@
-{
-  "layer": "top",
-  "position": "bottom",
-  "mode": "dock",
-  "exclusive": true,
-  "passthrough": false,
-  "gtk-layer-shell": true,
-  "height": 40,
-  "reload_style_on_change": true,
+[
+  {
+    "position": "top",
+    "modules-left": [
+      "network"
+    ],
+    "modules-center": [
 
-  "modules-left": [
-    "custom/menu",
-    "hyprland/workspaces",
-    "pulseaudio",
-    "pulseaudio#microphone",
-    "backlight"
-  ],
-  "modules-center": [
-  ],
-
-  "modules-right": [
-    "tray",
-    "network",
-    "cpu",
-    "memory",
-    "custom/fanctl",
-    "battery",
-    "clock",
-    "power-profiles-daemon",
-    "custom/power-menu"
-  ],
-
-  "include": [
-    "~/.config/waybar/modules/left.jsonc",
-    "~/.config/waybar/modules/hyprland.jsonc",
-    "~/.config/waybar/modules/right.jsonc"
-  ]
-}
+    ],
+    "modules-right": [
+      "temperature",
+      "cpu",
+      "memory",
+      "backlight",
+      "power-profiles-daemon",
+      "custom/power-menu",
+    ],
+    "include": [
+      "~/.config/waybar/modules/appbar.jsonc"
+    ]
+  },
+  {
+    "position": "bottom",
+    "modules-left": [
+      "custom/menu",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [],
+    "modules-right": [
+      "tray",
+      "pulseaudio",
+      "pulseaudio#microphone",
+      "battery",
+      "clock",
+      "custom/notification"
+    ],
+    "include": [
+      "~/.config/waybar/modules/statusbar.jsonc"
+    ]
+  }
+]
